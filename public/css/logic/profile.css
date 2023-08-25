@@ -1,0 +1,221 @@
+@CHARSET "UTF-8";
+
+section {
+	padding: 0 !important;
+	margin: 0;
+	width: 100%;
+	max-width: 985px;
+	margin: auto;
+}
+
+.header-profile {
+	width: 100%;
+	min-height: 200px;
+	background-image: url(../../img/menu/avantgard_profile.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 37.5px 0;
+	padding-bottom: 37.5px;
+	text-align: center;
+	transition: padding-bottom .75s ease-in;	
+}
+
+.bg-header{
+	position: absolute;
+    top: 0;	
+    width: 100%;
+    height: 100%;
+    max-height: 242px;
+    max-width: 985px;
+    z-index: 1;
+    opacity: 0.85;
+    background-color: #FF9800;
+	transition: all .625s ease-in;	
+}
+
+#snow{
+	height: 242px;
+    max-width: 985px;
+	z-index: 2;
+	left: inherit;
+	transition: all .625s ease-in;	
+}
+
+.header-profile img {
+	height: 125px;
+	width: 125px;
+	border-radius: 50%;
+	margin: auto;
+	z-index: 3;	
+	position: relative;
+}
+
+.header-profile button {
+    background-color: #FFFFFF;
+    opacity: 0.625;
+    margin: 0;
+    position: absolute;
+    top: 124px;
+    right: calc( 50% - 62px );
+	z-index: 4;	
+}
+
+.header-profile img,
+.header-profile h2,
+.header-profile button {
+	transition:	all .75s ease-in;
+}	
+
+.header-profile button:HOVER {
+	background-color: #FFFFFF;
+	opacity: 1;
+}
+
+.header-profile button i {
+	color: #757575;
+	font-size: 18px
+}
+
+.header-profile h2.mdl-card__title-text{
+	display: block;
+	color: #FFF;
+	position: relative;
+	z-index: 3
+}
+
+.header-profile h2.mdl-card__title-text:NTH-CHILD(2) {
+	margin-top: 16px;
+	margin-bottom: 0;
+	font-size: 24px;
+}
+
+.header-profile .progress{
+	height: 15px;
+	width: 200px;
+	margin: auto;
+	margin-top: 5px;
+	transition: all .75s ease-in;
+}
+
+.header-profile .progress-bar{
+	background-color: #5cb85c;	
+}
+
+.content-profile{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	transition: padding-top .75s ease-in;
+}
+
+.content-profile .mdl-card__title{
+	padding-bottom: 0
+}
+
+.mdl-tabs__tab-bar{
+	background-color: #FFFFFF;
+	transition: top .75s ease-in;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px
+		rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+}	
+	
+.mdl-tabs__tab-bar a.mdl-tabs__tab i{
+	display: none;
+    line-height: inherit;	
+}
+
+.mdl-tabs__tab-bar a.mdl-tabs__tab.is-active i,
+.mdl-tabs__tab-bar a.mdl-tabs__tab.is-active label{
+	color: #004062
+}
+
+.mdl-tabs__panel{
+	padding-top: 10px;
+}
+
+.mdl-textfield__input{  
+	border-radius: 0
+}
+
+/* SCROLL */
+@media screen and (max-width: 720px), (orientation: portrait){
+	.mdl-scroll .content-profile .mdl-tabs__tab-bar{
+		position: fixed;
+		z-index: 5;
+		min-height: 20px;
+		width: 100%;
+		top: 60px;		
+	}
+	
+	.mdl-scroll .content-profile{
+	    padding-top: 5px;
+	}
+}	
+
+@media ( max-width : 550px ){
+	.header-profile{
+		padding-bottom: 0;
+	}
+	
+	.header-profile .progress{
+		margin-top: 10px;
+		width: 100%;
+		border-radius: 0;
+	}
+	
+	.header-profile img {
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		margin: auto
+	}
+	
+	.header-profile button {
+	    top: 105px;
+	    right: calc( 50% - 50px );
+	}
+	
+	.mdl-card .row .col-xs-6{
+		width: 100%;
+	}	
+	
+	.mdl-tabs__tab-bar a.mdl-tabs__tab i{
+		display: block;
+	}
+	
+	.mdl-tabs__tab-bar a.mdl-tabs__tab label{
+		display: none;
+	}
+			
+	.content-profile{
+		min-height: 650px;
+	}
+	
+	.bg-header{
+	    max-height: 200px;
+	}
+	
+	#snow{
+		height: 200px;
+	}
+		
+}
+
+@media ( max-width : 990px ){
+	.mdl-tabs__panel{
+		padding: 10px;
+	}	
+}
+
+#cambiar_foto1{
+	cursor:not-drop
+}
+
+.header-color{
+	background-color: #004062;
+}
+
+.tooltip-inner{
+	max-width: 300px;
+}

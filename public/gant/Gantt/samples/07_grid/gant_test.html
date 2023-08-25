@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Inline editing</title>
+	<script src="../../codebase/dhtmlxgantt.js?v=5.2.0"></script>
+	<link rel="stylesheet" href="../../codebase/skins/dhtmlxgantt_terrace.css?v=5.2.0">
+	<script src="../common/testdata.js?v=5.2.0"></script>
+	<style>
+		html, body {
+			height: 100%;
+			padding: 0px;
+			margin: 0px;
+			overflow: hidden;
+		}
+		.red .gantt_cell, .odd.red .gantt_cell,
+		.red .gantt_task_cell, .odd.red .gantt_task_cell {
+			background-color: #FDE0E0;
+		}
+
+		.green .gantt_cell, .odd.green .gantt_cell,
+		.green .gantt_task_cell, .odd.green .gantt_task_cell {
+			background-color: #BEE4BE;
+		}
+
+	</style>
+</head>
+
+<body>
+<div id="gantt_here" style='width:100%; height:100%;'></div>
+<script>
+
+	var textEditor = {type: "text", map_to: "text"};
+	var dateEditor = {type: "date", map_to: "start_date", min: new Date(2018, 0, 1), max: new Date(2019, 0, 1)};
+	var durationEditor = {type: "number", map_to: "duration", min:0, max: 100};
+	var durationEditor2 = {type: "number", map_to: "duration2", min:0, max: 100};
+
+	gantt.config.columns = [
+		{name: "text", tree: true, width: 200, resize: true, editor: textEditor},
+		{name: "start_date", align: "center", width: 90, resize: true, editor: dateEditor},
+		{name: "duration2", align: "center", width: 90, resize: true, editor: durationEditor2},
+		{name: "duration", align: "center", width: 90, resize: true, editor: durationEditor}
+
+	];
+    gantt.templates.rightside_text = function (start, end, task) {
+		return "ID: #" + task.id;
+	};
+
+	gantt.templates.leftside_text = function (start, end, task) {
+		return task.duration + " days";
+	};
+
+	gantt.config.grid_width = 380;
+	gantt.config.add_column = false;
+
+	gantt.templates.task_row_class = function (start_date, end_date, item) {
+		if (item.progress >= 0 && item.progress <= 0.2) return "red";
+		if (item.progress >= 0.9) return "green";
+	};
+
+	gantt.init("gantt_here");
+	gantt.parse(demo_tasks_test);
+
+</script>
+</body>

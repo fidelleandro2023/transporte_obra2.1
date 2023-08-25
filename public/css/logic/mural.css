@@ -1,0 +1,235 @@
+@CHARSET "UTF-8";
+
+
+.cuenta-letras {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 1.5px;
+	margin-bottom: 1px;
+	font-family: roboto;
+	text-align: right;
+	line-height: 2;
+	font-size: 12px;
+	background-color: #FF9200;
+}
+
+.mdl-Letters {
+	display: block;
+	position: relative;
+	width: 100%;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	outline: none;
+	color: #000;
+	font-family: roboto;
+	font-size: 16px;
+	font-weight: 400;
+	border: none;
+}
+
+.comment {
+	max-width: 100%;
+}
+
+a.morelink {
+	text-decoration: none;
+	outline: none;
+}
+
+.morecontent span {
+	display: none;
+}
+
+.mdl-layout .mdl-layout__header .mdl-layout__tab-bar-container .mdl-layout__tab-bar-button
+	{
+	display: none
+}
+
+.mdl-card-mural .mdl-card__title img.img-circle {
+	position: relative;
+	top: 0px;
+	height: 40px;
+	width: 40px;
+	margin-right: 10px
+}
+
+.mdl-card-mural .mdl-card__title h2, .mdl-card-mural .mdl-card__title h5
+	{
+	width: calc(100% - 120px);
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+    left: 65px;
+}
+
+.mdl-card-mural .mdl-card__title h2 {
+	position: absolute;
+	top: 15px;
+}
+
+.mdl-card-mural .mdl-card__title h5 {
+	position: absolute;
+	top: 37.5px;
+	font-size: 12.5px
+}
+
+.mdl-card-mural.mdl-card .mdl-card__actions ul.mdl-list {
+	padding: 0
+}
+
+.mdl-card-mural.mdl-card .mdl-card__actions .mdl-list__item--three-line,
+	.mdl-card-mural.mdl-card .mdl-card__actions ul.mdl-list .mdl-list__item-text-body,
+	.mdl-card-mural.mdl-card .mdl-card__actions ul.mdl-list .mdl-list__item-primary-content
+	{
+	height: auto;
+	min-height: 52px;
+}
+
+.mdl-card-mural .mdl-card__supporting-text .mdl-options .mdl-button,
+	.mdl-card-mural .mdl-card__actions .mdl-list a.mdl-button {
+	border-radius: 50%;
+	height: 36px;
+	min-width: 36px !important;
+	margin: 5px;
+	background-color: #EEEEEE;
+	transition: background-color 1s ease;		
+}
+
+.modal .mdl-card .mdl-card__supporting-text .mdl-button {
+	border-radius: 50%;
+	height: 36px;
+	min-width: 36px !important;
+	/*margin: 5px;*/
+}
+
+.mdl-card-mural .mdl-comment {
+	border-top: 1px solid rgba(0, 0, 0, .1);
+	background-color: #FFF;
+	height: 50px;
+	width: 100%;
+	padding: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	vertical-align: middle;
+}
+
+.mdl-card-mural .mdl-card__actions .mdl-comment img, .mdl-card-mural .mdl-card__actions .mdl-comment .mdl-textfield,
+	.mdl-card-mural .mdl-card__actions .mdl-comment button {
+	float: left;
+}
+
+.mdl-card-mural .mdl-card__actions .mdl-comment img {
+	height: 40px;
+	width: 40px;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+
+.mdl-card-mural .mdl-card__actions .mdl-comment .mdl-textfield {
+	padding: 0;
+	width: calc(100% - 100px);
+}
+
+.mdl-card-mural .mdl-card__actions .mdl-comment .mdl-textfield .mdl-textfield__label
+	{
+	top: 2px;
+	margin: 0
+}
+
+.mdl-card-mural .mdl-card__actions .mdl-comment .mdl-textfield .mdl-textfield__label:AFTER
+	{
+	bottom: 0px;
+}
+
+.mdl-card-mural .mdl-card__actions .mdl-comment .mdl-textfield textarea.mdl-textfield__input
+	{
+	padding: 0;
+	max-height: 36px;
+}
+
+.mdl-card-mural .mdl-card__actions .mdl-comment button {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+}
+
+.mdl-card-mural .mdl-card__supporting-text .mdl-options button.active:FIRST-CHILD{
+	webkit-animation: ripple .51s ease-out;
+    animation: ripple .51s ease-out;
+}
+
+.mdl-card-mural .mdl-card__actions a.mdl-button.active,
+.mdl-card-mural .mdl-card__supporting-text .mdl-button.active{
+	background-color: #F44336;
+	
+}
+
+.mdl-card-mural .mdl-card__actions .mdl-button i,
+.mdl-card-mural .mdl-card__supporting-text .mdl-button i,
+.mdl-card-mural .mdl-card__actions .mdl-button.active i,
+.mdl-card-mural .mdl-card__supporting-text .mdl-button.active i{
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    height: 28px;
+}
+
+.mdl-card-mural .mdl-card__actions .mdl-button.active i,
+.mdl-card-mural .mdl-card__supporting-text .mdl-button.active i
+{
+	color: #FFFFFF !important;
+}
+
+.mdl-card-mural .mdl-card__supporting-text span {
+	position: relative;
+	top: 0px;
+	left: -2.5px;
+}
+
+.mdl-card-mural .mdl-card__actions {
+	background-color: #E0E0E0
+}
+
+.mdl-card-mural .mdl-card__actions ul.mdl-list {
+	max-height: 420px !important;
+	overflow-y: auto !important;
+}
+
+.mdl-card-mural .mdl-card__actions ul.mdl-list .mdl-list__item-text-body
+	{
+	margin-left: 55px;
+	width: calc(100% - 55px);
+}
+
+.mdl-card-mural .mdl-list__item .mdl-list__item-secondary-content {
+	margin: 0;
+}
+
+/*ANIMACION CORAZON */
+.animation{
+  -webkit-animation: ripple 1s ease-out forwards;
+          animation: ripple 1s ease-out forwards;
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(2deg);
+            transform: scale(2deg);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(2deg);
+            transform: scale(2deg);
+  }
+}

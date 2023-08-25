@@ -1,0 +1,2625 @@
+@CHARSET "UTF-8";
+
+/* --------------------------
+ *       STUDENT
+ * --------------------------
+ */
+.mdl-card.mdl-student{
+    max-width: 250px;
+	margin-top: 0px;	
+	margin-bottom:10px;
+	margin-right: 3px;
+	margin-left: 3px;	
+	display: inline-block;	
+	z-index: 1;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+    	 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+}
+
+.mdl-card.mdl-student .mdl-card__title{
+	padding-bottom: 10px;
+	padding-top: 60px;
+    -webkit-transition: padding-top .3s ease-in-out;
+       -moz-transition: padding-top .3s ease-in-out;
+    	 -o-transition: padding-top .3s ease-in-out;
+			transition: padding-top .3s ease-in-out;
+}
+
+.mdl-card.mdl-student .mdl-card__title img{
+	margin: auto;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.mdl-card.mdl-student .mdl-card__supporting-text{
+	padding-top: 0px;
+	text-align: center;	
+}
+
+.mdl-card.mdl-student .mdl-card__supporting-text .icon{
+	float: right;
+}
+
+.student-desc-state{
+	font-size: 14px;	
+	margin-bottom: 5px;
+}
+
+.student-desc-state i{
+	position: relative;
+	top: 2.5px;
+	font-size: 14px;		
+}
+
+.state{
+    position: absolute;
+    top: 120px;
+	right: -webkit-calc(50% - 60px);		
+	right: -moz-calc(50% - 60px);		
+	right: -ms-calc(50% - 60px);
+	right: -o-calc(50% - 60px);	
+    right: calc(50% - 60px);	
+	text-align: center;
+	line-height: 2.25;
+    width: 40px;
+    height: 40px;
+	border: 3px solid #FFFFFF;
+    border-radius: 50%;
+	background-color: #EEEEEE;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+    	 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+}
+
+/*-----  BECADO  -----*/
+.state.becado{
+	background-color: #FFEB3B;
+	color: #009688;
+}
+
+.state.becado:after{
+	content: "B";	
+}
+
+.modal .state{
+	position: relative;
+	top: inherit;
+	right: inherit;
+    padding-right: 5px;
+    margin-right: 5px;
+    padding: 9px 8px;
+	border: none;
+
+}
+
+.state:after{
+	content: "-";
+	font-size: 13px;
+	padding-left: 1px;
+	vertical-align: middle;
+}
+
+.state:HOVER{
+	cursor: pointer;
+}
+
+.datos-incompletos:after,
+.pre-registro:after,
+.registrado:after,
+.promovido:after,
+.verano:after,
+.retirado:after,
+.matriculable:after,
+.matriculado:after,
+.no-promivido:after,
+.nivelacion:after,
+.egresado:after{
+	font-weight: 500;		
+}
+
+/*----- DATOS INCOMPLETOS -----*/
+.datos-incompletos,
+.label-datos-incompletos{
+	background-color: #EEEEEE;	
+	color: #757575;
+}
+
+.datos-incompletos:after{
+	content: "DI";
+}
+
+/*----- PRE-REGISTRO -----*/
+.pre-registro,
+.label-pre-registro{
+	background-color: #EEEEEE;	
+	color: #757575;
+}
+
+.pre-registro:after{
+	content: "PR";
+}
+
+/*-----   REGISTRO   -----*/
+.registrado,
+.label-registrado{
+	background-color: #E0E0E0;
+	color: #9E9E9E;	
+}
+
+.registrado:after{
+	content: "RE";
+}
+
+/*-----   MATRICULABLE   -----*/
+.matriculable,
+.label-matriculable{
+	background-color: #757575;
+	color: #FFFFFF;	
+}
+
+.matriculable:after{
+	content: "MB";
+}
+
+/*-----  MATRICULADO  -----*/
+.matriculado:after{
+	content: "MT";	
+}
+
+.student-matriculado ~ .mdl-card__actions .mdl-button{
+	color: #3350B9;
+}
+
+.matriculado,
+.label-matriculado,
+.student-matriculado ~ .mdl-card__actions .mdl-button--raised{
+	background-color: #3350B9;
+	color: #FFF
+}
+
+/*-----   PROMOVIDO   -----*/
+.promovido:after{
+	content: "PV";		
+}
+
+.student-promovido ~ .mdl-card__actions .mdl-button{
+	color: #8BC34A;
+}
+
+.promovido,
+.label-promovido,
+.student-promovido ~ .mdl-card__actions .mdl-button--raised{
+	background-color: #8BC34A;
+    color: #FFF;	
+}
+
+/*-----    VERANO    -----*/
+.verano:after{
+	content: "VR";		
+}
+
+.student-verano ~ .mdl-card__actions .mdl-button{
+	color: #757575;
+}
+
+.verano,
+.label-verano,
+.student-verano ~ .mdl-card__actions .mdl-button--raised{
+	background-color: #FFEB3B;
+    color: #757575 !important;	
+}
+
+/*-----    RETIRADO    -----*/
+.retirado:after{
+	content: "RT";		
+}
+
+.student-retirado ~ .mdl-card__actions .mdl-button{
+	color: #757575;
+}
+
+.retirado,
+.label-retirado,
+.student-retirado ~ .mdl-card__actions .mdl-button--raised{
+	background-color: #757575;
+    color: #FFF;	
+}
+
+/*-----    NO PROMOVIDO    -----*/
+.no-promovido:after{
+	content: "NP";		
+}
+
+.student-no-promovido ~ .mdl-card__actions .mdl-button{
+	color: #E53935;
+}
+
+.no-promovido,
+.label-no-promovido,
+.student-no-promovido ~ .mdl-card__actions .mdl-button--raised{
+	background-color: #E53935;
+    color: #FFF;	
+}
+
+/*-----    NIVELACION    -----*/
+.nivelacion:after{
+	content: "NV";
+}
+
+.student-nivelacion ~ .mdl-card__actions .mdl-button{
+	color: #EF9A9A;
+}
+
+.nivelacion,
+.label-nivelacion,
+.student-nivelacion ~ .mdl-card__actions .mdl-button--raised{
+	background-color: #EF9A9A;
+    color: #FFF;	
+}
+
+/*-----    EGRESADO    -----*/
+.egresado:after{	
+	content: "EX";	
+}
+
+.student-egresado ~ .mdl-card__actions .mdl-button{
+	color: #FF9800;
+}
+
+.egresado,
+.label-egresado,
+.student-egresado ~ .mdl-card__actions .mdl-button--raised{
+	background-color: #FF9800;
+    color: #FFF;	
+}
+
+/*----- PUNTUAL -----*/
+.pago.puntual .student-name, 
+.pago.puntual ~ .mdl-card__actions .mdl-button{
+	color: #009688;
+}
+
+.pago.puntual ~ .mdl-card__actions .mdl-button--raised{
+	background-color: #009688;
+	color: #FFF;
+}
+
+/*-----   MOROSO   -----*/
+.pago.moroso .student-name, 
+.pago.moroso ~ .mdl-card__actions .mdl-button{
+	color: #F44336;
+}
+
+.pago.moroso ~ .mdl-card__actions .mdl-button--raised{
+	background-color: #F44336;
+	color: #FFF;
+}
+
+/* ICON DISABLED FOR STUDENT CARDS */
+.doc__recibido{
+	color: #3350B9;
+	cursor: pointer;
+}
+
+.doc__no-recibido{
+	color: #BDBDBD;
+	cursor: no-drop
+}
+
+/* --------------------------
+ *    STUDENT ASSISTENCE
+ * --------------------------
+ */
+.mdl-student_assitence{
+	width: 154px;
+	margin-top: 0px;	
+	margin-bottom:10px;
+	margin-right: 5px;
+	margin-left: 5px;	
+	display: inline-block;
+	z-index: 1;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+    	 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;	
+}
+
+.mdl-student_assitence .mdl-card {
+	width: 100%;	
+	cursor: pointer;
+	margin: 0;
+	background-color: transparent;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);	
+    		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);	
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+    	 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;	
+}
+
+.mdl-student_assitence .mdl-card .mdl-card__supporting-text{
+	max-height: 165px;
+	text-align: center;
+}
+
+.mdl-student_assitence .mdl-card .assistance{
+	background-color: #EEEEEE;
+	height: 25px;
+	width: 25px;
+	border-radius: 100%;
+	position: absolute;
+	color: #FFF;
+	font-weight: 500;
+	text-align: center;
+	line-height: 1.75;
+    font-size: 14px;
+}
+
+.label-circle{
+    height: 28px;
+    width: 28px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #EEEEEE;
+	color: #FFFFFF;
+    vertical-align: middle;
+}
+
+.label-circle:after{
+	font-size: 14px;
+	line-height: 2
+}
+
+.mdl-student_assitence .mdl-card ul{
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+	width: 100%;
+	height: 100%;
+}
+
+.mdl-student_assitence .mdl-card ul li{
+	width: 100%
+}
+
+.mdl-student_assitence .mdl-card ul i{
+	font-size: 14px;
+	margin-right: 5px;
+}
+
+.mdl-student_assitence .mdl-card img{
+	border-radius: 100%;
+	width: 75px;
+	height: 75px;
+}
+
+.mdl-student_assitence .mdl-card .mdl-card__supporting-text h2{
+	margin: 0;
+	margin-top: 5px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 1;
+	color: #757575
+}
+
+.mdl-student_assitence .mdl-card .mdl-card__supporting-text h2:nth-child(2n){
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.bg-present,
+.label-circle.present,
+.present .assistance{
+	background-color: #8BC34A !important
+}
+
+.bg-delay,
+.label-circle.delay,
+.delay .assistance{
+	background-color: #FFEB3B !important;
+	color: #795548 !important;
+}
+
+.bg-delay-justify,
+.label-circle.delay-justify,
+.delay-justify .assistance{
+	background-color: #673AB7 !important
+}
+.bg-retirado,
+.label-circle.retirado,
+.delay-justify .retirado{
+	background-color: #F44336 !important
+}
+
+
+.absence{
+	opacity: 0.25;
+}
+
+.bg-absence,
+.label-circle.absence,
+.absence .assistance{
+	background-color: #757575 !important
+}
+
+.bg-absence-justify,
+.label-circle.absence-justify,
+.absence-justify .assistance{
+	background-color: #FF9800 !important;
+	color: #FFF !important;		
+}
+
+.label-circle.present:after,
+.present .assistance:after{
+	content: "A";
+}
+
+.label-circle.delay:after,
+.delay .assistance:after{
+	content: "T";	
+}
+
+.label-circle.delay-justify:after,
+.delay-justify .assistance:after{
+	content: "TJ";	
+}
+
+.label-circle.absence:after,
+.absence .assistance:after{
+	content: "F";	
+}
+
+.label-circle.absence-justify:after,
+.absence-justify .assistance:after{
+	content: "FJ";	
+}
+
+.i-present{
+	color: #8BC34A !important
+}
+
+.i-delay{
+	color: #FFEB3B !important
+}
+
+.i-delay-justify{
+	color: #673AB7 !important
+}
+
+.i-absence{
+	color: #757575 !important
+}
+
+/* --------------------------
+ *    STUDENT NOTES
+ * --------------------------
+ */
+.mdl-card.mdl-note{	
+	width: 140px;
+	cursor: pointer; 
+	margin-top: 0px;	
+	margin-bottom:10px;
+	margin-right: 5px;
+	margin-left: 5px;	
+	display: inline-block;
+	z-index: 1;	
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+    	 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;	
+}
+
+.mdl-note .mdl-card__supporting-text{
+	text-align: center;
+}
+
+.mdl-note .mdl-card__supporting-text img{
+	border-radius: 100%;
+    width: 70px;
+    height: 70px;
+}
+
+.mdl-note .mdl-card__supporting-text h2{
+	margin: 0;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1;
+    color: #757575;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.mdl-note .mdl-card__supporting-text h2:AFTER{
+	content: ' ';
+    width: 50px;
+    height: 14px;
+    right: 16px;
+    position: absolute;
+    z-index: 100;
+    text-align: right;
+    background-image: -webkit-gradient(linear,left top,right top,color-stop(0%,rgba(255,255,255,0)),color-stop(100%,rgba(255,255,255,1)));
+    background-image: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1));
+    background: linear-gradient(to right,rgba(255,255,255,0),#FFFFFF);
+    -webkit-transition: all 1.3s ease-in-out;
+       -moz-transition: all 1.3s ease-in-out;
+        -ms-transition: all 1.3s ease-in-out;	
+    	 -o-transition: all 1.3s ease-in-out;
+			transition: all 1.3s ease-in-out;
+}
+
+.mdl-note .mdl-card__supporting-text.bg_after-text-green h2:AFTER {
+    background: linear-gradient(to right,rgba(255,255,255,0),#4CAF50);
+}
+
+.mdl-note .mdl-card__supporting-text.bg_after-text-red   h2:AFTER {
+    background: linear-gradient(to right,rgba(255,255,255,0),#F44336);
+}
+
+.mdl-note .mdl-button__circle{
+    height: 30px;
+    width: 30px;
+	margin-left: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    font-size: 11px;
+    text-align: center;
+    color: #757575;
+    line-height: 3;
+}
+
+.mdl-note .mdl-value{	
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    background-color: transparent;
+    top: 50px;
+    left: 90px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0;
+    line-height: 36px;
+}
+
+.mdl-note .mdl-value i{
+	font-size: 32px;
+	color: #757575
+}
+
+.mdl-student_red .mdl-button__circle{
+    background-color: #F44336;
+	color: #FFFFFF;
+}
+
+.mdl-student_green .mdl-button__circle{
+    background-color: #4CAF50;	
+	color: #FFFFFF;	
+}
+
+.mdl-student_ambar .mdl-button__circle{
+    background-color: #FFC107;	
+	color: rgb(37, 32, 20);
+}
+
+.mdl-student_red .mdl-value{
+    background-color: #F44336;
+	color: #FFFFFF;
+}
+
+.mdl-student_green .mdl-value{
+    background-color: #4CAF50;	
+	color: #FFFFFF;	
+}
+
+.mdl-student_ambar .mdl-value{
+    background-color: #FFC107;	
+	color: rgb(37, 32, 20);
+}
+
+.mdl-note .mdl-student__option{
+	display: inline-block;
+}
+
+.mdl-note .mdl-card__actions{
+	text-align: center;
+}
+
+.mdl-note .mdl-student__option button{
+	margin: 0;
+    width: 20px;
+    min-width: 20px;
+	background-color: #eeeeee;
+}
+
+.mdl-note .mdl-student__option button i,
+.mdl-student__option label{
+	font-size: 16px;
+	color: #757575
+}
+
+.mdl-note .mdl-student__option label{
+	margin: 0
+}
+
+.mdl-note .mdl-student__option button.mdl-button--icon ~ label.awards-points {
+    position: relative;
+    top: -5px;
+    right: 8px;
+    font-size: 12px;
+}
+
+/* --------------------------
+ *       AWARDS 
+ * --------------------------
+ */
+.mdl-awards {
+    width: 32.3%;
+    display: inline-block;
+    border-radius: 0px;
+    border:none;
+    box-shadow: none;
+    margin: 0;
+    padding: 16px;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+@media ( max-width: 470px ){
+	.mdl-awards {
+	    width: 49%;
+	}
+}
+
+.mdl-awards{
+	opacity: 0;
+	-webkit-transform: scale(0);
+	   -moz-transform: scale(0);
+	    -ms-transform: scale(0);
+	     -o-transform: scale(0);
+		    transform: scale(0);
+	-webkit-transition: .5s all;	
+	   -moz-transition: .5s all;	
+	    -ms-transition: .5s all;
+	     -o-transition: .5s all;	
+		    transition: .5s all;
+}
+
+.transformed.mdl-awards{
+	opacity: 1;
+	-webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	     -o-transform: scale(1);
+		    transform: scale(1);
+}
+
+.mdl-awards:hover{
+	cursor: pointer;
+}
+
+.mdl-awards img:hover{ 
+	-webkit-transform: scale(1.05);
+	   -moz-transform: scale(1.05);
+	    -ms-transform: scale(1.05);
+	     -o-transform: scale(1.05);
+		    transform: scale(1.05);
+}
+
+.awards-points{
+	position: absolute;
+    top: 15px;
+    right: -webkit-calc(50% - 65px);
+	right: -moz-calc(50% - 65px);
+	right: -ms-calc(50% - 65px);
+	right: -o-calc(50% - 65px);
+	right: calc(50% - 65px);
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    background-color: #EEEEEE;
+    border: 2px double #ffffff;
+    color: #757575;
+    text-align: center;
+    font-size: 12px;
+    line-height: 34px;
+	-webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	     -o-transform: scale(1);
+		    transform: scale(1);
+	-webkit-transition: -webkit-transform .5s ease .25s;
+	-webkit-transition: -moz-transform .5s ease .25s;
+	-webkit-transition: -ms-transform .5s ease .25s;
+	-webkit-transition: -ms-transform .5s ease .25s;
+	-webkit-transition: -o-transform .5s ease .25s;
+	-webkit-transition: transform .5s ease .25s;
+	   -moz-transition: -webkit-transform .5s ease .25s;
+	   -moz-transition: -moz-transform .5s ease .25s;
+	   -moz-transition: -ms-transform .5s ease .25s;
+	   -moz-transition: -ms-transform .5s ease .25s;
+	   -moz-transition: -o-transform .5s ease .25s;
+	   -moz-transition: transform .5s ease .25s;
+	    -ms-transition: -webkit-transform .5s ease .25s;
+	    -ms-transition: -moz-transform .5s ease .25s;
+	    -ms-transition: -ms-transform .5s ease .25s;
+	    -ms-transition: -ms-transform .5s ease .25s;
+	    -ms-transition: -o-transform .5s ease .25s;
+	    -ms-transition: transform .5s ease .25s;
+	     -o-transition: -webkit-transform .5s ease .25s;
+	     -o-transition: -moz-transform .5s ease .25s;
+	     -o-transition: -ms-transform .5s ease .25s;
+	     -o-transition: -ms-transform .5s ease .25s;
+	     -o-transition: -o-transform .5s ease .25s;
+	     -o-transition: transform .5s ease .25s;
+			transition: -webkit-transform .5s ease .25s;
+			transition: -moz-transform .5s ease .25s;
+			transition: -ms-transform .5s ease .25s;
+			transition: -ms-transform .5s ease .25s;
+			transition: -o-transform .5s ease .25s;
+			transition: transform .5s ease .25s;	
+}
+
+@media ( max-width: 320px ){
+	.awards-points {
+	    right: -webkit-calc(50% - 50px);
+		right: -moz-calc(50% - 50px);
+		right: -ms-calc(50% - 50px);
+		right: -o-calc(50% - 50px);
+		right: calc(50% - 50px);
+	}
+}
+
+.mdl-awards img{
+	width: 100%;
+	max-width: 118px;
+	margin: auto;
+	margin-bottom: 10px;
+	-webkit-transition: all .3s ease-in-out;	
+	   -moz-transition: all .3s ease-in-out;	
+	    -ms-transition: all .3s ease-in-out;
+	     -o-transition: all .3s ease-in-out;	
+		    transition: all .3s ease-in-out;
+}
+
+.mdl-awards label{
+    margin: 0;
+    width: 148px;
+    font-size: 14px;
+    height: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	font-weight: bold;
+}
+
+.awards-points.mdl-bounce{
+	-webkit-transform: scale(0);
+	   -moz-transform: scale(0);
+	    -ms-transform: scale(0);
+	     -o-transform: scale(0);
+		    transform: scale(0);
+}
+
+.awards-points.more-points{	
+    background-color: #00BCD4;
+    border: 2px double #00BCD4;	
+	color: #FFFFFF
+}
+
+/* --------------------------
+ *       CLASSROOM 
+ * --------------------------
+ */
+.mdl-card.mdl-classroom{
+    max-width: 250px;
+	margin-top: 0px;	
+	margin-bottom:10px;
+	margin-right: 5px;
+	margin-left: 5px;		
+	display: inline-block;   
+	z-index: 1;	
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+    	-ms-transition: all .3s ease-in-out;
+    	 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+}
+
+.mdl-card.mdl-classroom .mdl-card__menu {
+	width: auto	
+}
+
+.mdl-card.mdl-classroom .mdl-card__title{
+    font-size: 16px;	
+	color: 	#5E5E5E;
+	font-weight: 500;
+	cursor:default;
+    width: -webkit-calc( 100% - 50px);
+    width: -moz-calc( 100% - 50px);
+    width: -ms-calc( 100% - 50px);
+    width: -o-calc( 100% - 50px);
+    width: calc( 100% - 50px);
+}
+
+.mdl-card.mdl-classroom .mdl-card__title:AFTER{
+	content: '';
+    width: 40px;
+    height: 20px;
+    right: 65px;
+    position: absolute;
+    z-index: 100;
+    float: right;
+    background-image: -webkit-gradient(linear,left top,right top,color-stop(0%,rgba(255,255,255,0)),color-stop(100%,rgba(255,255,255,1)));
+    background-image: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1));
+    background: linear-gradient(to right,rgba(255,255,255,0),#FFFFFF);
+}
+
+.mdl-card.mdl-classroom .mdl-card__supporting-text{	
+	padding-top: 0px;
+	text-align: center;
+}
+
+/*----- AÑO PASADO -----*/
+.classroom-last-year ~ .mdl-card__actions .mdl-button--raised{
+	background-color: #EEEEEE;	
+	color: #757575;
+}
+
+.classroom-last-year ~ .mdl-card__actions .mdl-button{
+	color: #757575;
+}
+
+
+/*----- AÑO RECIENTE -----*/
+.classroom-now-year ~ .mdl-card__actions .mdl-button--raised{
+	background-color: #3350B9;
+	color: #FFF
+}
+
+.classroom-now-year ~ .mdl-card__actions .mdl-button{
+	color: #3350B9;
+}
+
+/*----- PUNTUAL -----*/
+.mdl-classroom.puntual .mdl-card__title-text,
+.mdl-classroom.puntual .mdl-card__supporting-text .classroom-photo-desc strong{
+	color: #009688;
+}
+
+.mdl-classroom.puntual .mdl-card__supporting-text ~ .mdl-card__actions .mdl-button--raised {
+	background-color: #009688;
+	color: #FFF;
+}
+
+/*-----   MOROSO   -----*/
+.mdl-classroom.moroso .mdl-card__title-text,
+.mdl-classroom.moroso .mdl-card__supporting-text .classroom-photo-desc strong{
+	color: #F44336;
+}
+
+.mdl-classroom.moroso .mdl-card__supporting-text ~ .mdl-card__actions .mdl-button--raised {
+	background-color: #F44336;
+	color: #FFF;
+}
+
+/*----- ANTERIOR -----*/
+.mdl-classroom.anterior .mdl-card__title-text,
+.mdl-classroom.anterior .mdl-card__supporting-text .classroom-photo-desc strong{
+	color: #757575;
+}
+
+.mdl-classroom.anterior .mdl-card__supporting-text ~ .mdl-card__actions .mdl-button--raised {
+	background-color: #757575;
+	color: #FFF;
+}
+
+/* CHECKBOX MOROSO */
+.mdl-classroom.moroso .mdl-checkbox.is-checked .mdl-checkbox__box-outline {
+    border-color: #F44336;
+}
+
+.mdl-classroom.moroso .mdl-checkbox__ripple-container .mdl-ripple,
+.mdl-classroom.moroso .mdl-checkbox.is-checked .mdl-checkbox__tick-outline{
+	background-color: #F44336;
+}
+
+.mdl-classroom.moroso .mdl-switch.is-checked .mdl-switch__track{
+	background-color: #F44336;
+}
+
+.classroom-photo{
+	text-align: right;	
+	color: #9E9E9E;
+	padding: 0;
+	margin-top: 5px;
+}
+
+.classroom-photo img{
+	margin: 0;
+	padding: 0;
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+}
+
+.classroom-photo-desc{
+	font-weight: 100;	
+	color: #9E9E9E;
+	padding: 0;
+	margin-top: 5px;
+}
+
+.classroom-photo-desc strong{
+	font-weight: 600
+}
+
+/* --------------------------
+ *       PARENT
+ * --------------------------
+ */
+.mdl-card.mdl-parent{
+    max-width: 250px;
+	margin-top: 0px;	
+	margin-bottom:10px;
+	margin-right: 5px;
+	margin-left: 5px;	
+	display: inline-block;
+	z-index: 1;	
+	-webkit-transition: all .3s ease-in-out;
+	   -moz-transition: all .3s ease-in-out;
+	    -ms-transition: all .3s ease-in-out;
+	     -o-transition: all .3s ease-in-out;
+		    transition: all .3s ease-in-out;
+}
+
+.mdl-card.mdl-parent .mdl-card__title{
+	padding-bottom: 10px;
+	padding-top: 50px;	
+}
+
+.mdl-card.mdl-parent .mdl-card__supporting-text{
+	padding-top: 0;
+	text-align: center;
+}
+
+.mdl-card.mdl-parent .mdl-card__supporting-text i{
+	font-size: 20px;
+}
+
+/* ---------------------------------------
+ *       DETAIL TEACHER
+ * ---------------------------------------
+ */
+.mdl-card.mdl-teacher{
+    max-width: 250px;
+	margin-top: 0px;	
+	margin-bottom:10px;
+	margin-right: 5px;
+	margin-left: 5px;	
+	display: inline-block;
+	z-index: 1;	
+	-webkit-transition: all .3s ease-in-out;
+	   -moz-transition: all .3s ease-in-out;
+	    -ms-transition: all .3s ease-in-out;
+	     -o-transition: all .3s ease-in-out;
+		    transition: all .3s ease-in-out;
+}
+
+.mdl-card.mdl-teacher .mdl-card__title{
+	padding-bottom: 10px;
+	padding-top: 60px;
+}
+
+.mdl-card.mdl-teacher .mdl-card__supporting-text{
+	padding-top: 0;
+	text-align: center;
+}
+
+.mdl-card.mdl-teacher .mdl-card__title img{
+	margin: auto;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.mdl-card.mdl-teacher .mdl-card__supporting-text{
+	padding-top: 0px;
+	text-align: center;
+}
+
+/* --------------------------
+ *       COLLABORATOR
+ * --------------------------
+ */
+.mdl-card.mdl-collaborator{
+    max-width: 250px;
+	margin-top: 0px;	
+	margin-bottom:10px;
+	margin-right: 5px;
+	margin-left: 5px;	
+	display: inline-block;
+	z-index: 1;	
+	-webkit-transition: all .3s ease-in-out;
+	   -moz-transition: all .3s ease-in-out;
+	    -ms-transition: all .3s ease-in-out;
+	     -o-transition: all .3s ease-in-out;
+		    transition: all .3s ease-in-out;
+}
+
+.mdl-card.mdl-collaborator .mdl-card__title,
+.mdl-card.mdl-collaborator .mdl-card__supporting-text,
+.mdl-card.mdl-collaborator .mdl-card__actions{
+	background-color: transparent;	
+}
+
+.mdl-card.mdl-collaborator .mdl-card__title{
+	padding-bottom: 10px;
+	padding-top: 50px;	
+	text-align: center;
+}
+
+.mdl-card.mdl-collaborator .mdl-card__title img{
+	border: 3px solid #FFFFFF;	
+	-webkit-transition: all .3s linear;
+	   -moz-transition: all .3s linear;
+	    -ms-transition: all .3s linear;
+	     -o-transition: all .3s linear;
+		    transition: all .3s linear;
+}
+
+.mdl-card.mdl-collaborator .mdl-card__title:hover img{
+	opacity: 0.5;
+}
+
+.mdl-card.mdl-student .mdl-card__supporting-text{
+	padding-top: 0px;
+	text-align: center;	
+}
+
+.collaborator-rol{
+	color: #8bc34a;
+	overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+	height: 30px;
+	text-align: center;	
+}
+
+.collaborator-rol label {
+   max-width: 140px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin: 4px 0
+}
+
+.collaborator-rol label + button {
+    width: 26px;
+	height: 26px;
+	min-width: 26px;
+	min-height: 26px;
+	font-size: 14px;
+	margin: 0;
+	z-index: 1000;
+}
+
+.collaborator-value a{
+	color: #757575;
+	border-bottom: 1px dotted;
+}
+
+.mdl-card.mdl-collaborator .mdl-card__actions{
+	padding: 0 16px 16px;
+}
+
+.mdl-card.mdl-collaborator .mdl-card__actions button.mdl-button{
+	margin:0;	
+}
+
+.mdl-card.mdl-collaborator.mdl-collaborator__inactive{	
+	-webkit-transform: scale(0);
+	   -moz-transform: scale(0);
+	    -ms-transform: scale(0);
+	     -o-transform: scale(0);
+		    transform: scale(0);
+	
+}
+
+.mdl-card.mdl-collaborator.mdl-collaborator__active{
+	-webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	     -o-transform: scale(1);
+		    transform: scale(1);
+}
+
+.mdl-card.mdl-teacher.part-disable .mdl-card__title,
+.mdl-card.mdl-teacher.part-disable .mdl-card__supporting-text,
+.mdl-card.mdl-teacher.part-disable .mdl-card__actions,
+.mdl-card.mdl-student.part-disable .mdl-card__title,
+.mdl-card.mdl-student.part-disable .mdl-card__supporting-text,
+.mdl-card.mdl-student.part-disable .mdl-card__actions,
+.mdl-card.mdl-collaborator.part-disable .mdl-card__title,
+.mdl-card.mdl-collaborator.part-disable .mdl-card__supporting-text,
+.mdl-card.mdl-collaborator.part-disable .mdl-card__actions{
+	opacity:0.4;
+}
+
+.mdl-card.mdl-teacher.part-disable .mdl-photo:hover .mdl-img,
+.mdl-card.mdl-teacher.part-disable button.mdl-button,
+.mdl-card.mdl-teacher.part-disable .student-name,
+.mdl-card.mdl-student.part-disable .mdl-photo:hover .mdl-img,
+.mdl-card.mdl-student.part-disable button.mdl-button,
+.mdl-card.mdl-student.part-disable .student-name,
+.mdl-card.mdl-collaborator.part-disable .mdl-photo:hover .mdl-img,
+.mdl-card.mdl-collaborator.part-disable button.mdl-button,
+.mdl-card.mdl-collaborator.part-disable .collaborator-rol{
+	color:#757575;
+}
+
+.mdl-card.mdl-teacher.part-disable .mdl-button--raised,
+.mdl-card.mdl-student.part-disable .mdl-button--raised,
+.mdl-card.mdl-collaborator.part-disable .mdl-button--raised{
+	background-color: #757575;
+}
+
+.mdl-card.mdl-teacher.part-disable .mdl-photo:hover .mdl-img,
+.mdl-card.mdl-student.part-disable .mdl-photo:hover .mdl-img,
+.mdl-card.mdl-collaborator.part-disable .mdl-photo:hover .mdl-img{
+	border-color: transparent !important;
+	cursor: no-drop;
+}
+
+.mdl-card.mdl-teacher.part-disable .mdl-card__title:hover .mdl-photo .mdl-img,
+.mdl-card.mdl-student.part-disable .mdl-card__title:hover .mdl-photo .mdl-img,
+.mdl-card.mdl-collaborator.part-disable .mdl-card__title:hover .mdl-photo .mdl-img{
+	opacity: 1 !important;
+}
+
+/* --------------------------
+ *           TOUR
+ * --------------------------
+ */
+.mdl-card.mdl-tour{
+    max-width: 180px;
+    margin: 0 5px 10px 5px;	
+	display: inline-block;	
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);	
+    		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);	
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+    	 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+}
+
+.mdl-tour .mdl-card__title,
+.mdl-tour .mdl-card__supporting-text,
+.mdl-tour .mdl-card__actions{
+	background-color: #fff;
+	color: #757575;	
+}
+
+.mdl-tour .mdl-card__title-text{
+	color: #757575;
+	font-weight: 400
+}
+
+.mdl-tour .mdl-card__supporting-text .mdl-card__title-text{
+	font-size: 14px
+}
+
+.mdl-tour .mdl-card__supporting-text .list-images{
+	width: 100%;
+	height: 55px;
+	position: relative;
+}
+
+.mdl-tour .mdl-card__supporting-text .list-images img{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid #FFF;
+	position: absolute;
+	bottom: 0
+}
+
+.mdl-tour .mdl-card__supporting-text .list-images img:nth-child(1){
+	left: 0;
+	z-index: 4;
+}
+
+.mdl-tour .mdl-card__supporting-text .list-images img:nth-child(2){
+	left: 25px;
+	z-index: 3;
+}
+
+.mdl-tour .mdl-card__supporting-text .list-images img:nth-child(3){
+	left: 50px;
+	z-index: 2;
+}
+
+.mdl-tour .mdl-card__supporting-text .list-images div{
+	position: absolute;
+	bottom: 0;
+	left: 75px;
+	z-index: 1;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #FFF;
+	color: #2196F3;
+    text-align: center;
+    font-size: 28px;
+}
+
+.mdl-tour .mdl-card__supporting-text .list-images div:before{
+	vertical-align: middle;
+}
+
+.mdl-tour .mdl-card__title {
+	padding-bottom: 0;
+	padding-top: 10px;
+	min-height: 35px;
+}
+
+.mdl-tour .mdl-card__supporting-text {
+	padding-top: 0;
+	text-align: left;
+}
+
+.mdl-tour .mdl-card__actions{
+	border-top: 1px solid #F5F5F5;	
+	padding: 0
+}
+
+.mdl-tour .mdl-card__actions button,
+.mdl-tour .mdl-card__actions a{
+	width: 100%;
+	margin: 0;
+	color: #FFF;
+	text-align: left;
+	font-weight: lighter;
+}
+
+.mdl-tour .mdl-card__actions button i,
+.mdl-tour .mdl-card__actions a i{
+	position: absolute;
+	right: 14px;
+    bottom: 5px;
+	color: #FFF
+}
+
+.mdl-tour.mdl-tour-past{
+	opacity: 0.625;
+}
+
+.mdl-tour.mdl-tour-past:HOVER{
+	opacity: 1;
+}
+
+.mdl-tour.mdl-tour-past .mdl-card__title,
+.mdl-tour.mdl-tour-past .mdl-card__supporting-text,
+.mdl-tour.mdl-tour-past .mdl-card__actions{
+	background-color: #BDBDBD;
+	color: #757575
+}
+
+
+.mdl-tour.mdl-tour-past .mdl-card__title-text{
+	color: #757575
+}
+
+.mdl-tour.mdl-tour-past .mdl-card__supporting-text .list-images img{
+	border-color: rgba(117, 117, 117, 0.72);
+}
+
+.mdl-tour.mdl-tour-past .mdl-card__supporting-text .list-images div{
+	background-color: rgba(117, 117, 117, 0.72);
+	color: #FFF;
+}
+
+.mdl-tour.mdl-tour-past .mdl-card__actions{
+	border-color: rgba(117, 117, 117, 0.72);	
+}
+
+.mdl-tour.mdl-tour-past .mdl-card__actions button,
+.mdl-tour.mdl-tour-past .mdl-card__actions a{
+	color: #757575;
+}
+
+.mdl-tour.mdl-tour-past .mdl-card__actions button i,
+.mdl-tour.mdl-tour-past .mdl-card__actions a i{
+	color: #757575
+}
+
+/* --------------------------
+ *       PHOTO
+ * --------------------------
+ */
+.mdl-photo{
+	background-color: #FFFFFF;
+    cursor: pointer;
+    overflow: hidden;
+    width: 100px;
+	margin: auto;
+	text-align: center;	
+	padding: 0;
+}
+
+.mdl-img {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	margin: auto 0;
+	cursor: pointer;
+	border: 3px solid;
+	border-color: #FFFFFF;	
+	opacity: 1;	
+    -webkit-transition: border-color .5s ease-in, opacity .5s ease-in;	
+       -moz-transition: border-color .5s ease-in, opacity .5s ease-in;	
+    	-ms-transition: border-color .5s ease-in, opacity .5s ease-in;
+   		 -o-transition: border-color .5s ease-in, opacity .5s ease-in;	
+			transition: border-color .5s ease-in, opacity .5s ease-in;	
+}
+
+.mdl-photo:hover .mdl-img{
+	opacity: 0.5;	
+	border-color: #004062 !important;
+}
+
+.mdl-photo .fade-caption i{
+	font-size: 42px;
+	color: #004062;
+	position:absolute;
+	right: -webkit-calc(50% - 20.5px);
+	right: -moz-calc(50% - 20.5px);	
+	right: -ms-calc(50% - 20.5px);	
+	right: -o-calc(50% - 20.5px);	
+	right: calc(50% - 20.5px);	
+    top: 75px;
+	opacity: 0;
+	-webkit-transform: scale(0);
+	   -moz-transform: scale(0);
+	    -ms-transform: scale(0);
+	     -o-transform: scale(0);
+		    transform: scale(0);
+    -webkit-transition: opacity .5s ease-in, transform.25s ease-in;
+       -moz-transition: opacity .5s ease-in, transform.25s ease-in;
+    	-ms-transition: opacity .5s ease-in, transform.25s ease-in;
+   		 -o-transition: opacity .5s ease-in, transform.25s ease-in;
+			transition: opacity .5s ease-in, transform.25s ease-in;
+}
+
+.mdl-photo:hover .fade-caption i{
+	opacity:1;
+	-webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	     -o-transform: scale(1);
+		    transform: scale(1);
+	-webkit-transform: scale(1);
+}
+
+/* --------------------------
+ *       INDICATOR
+ * --------------------------
+ */
+.mdl-card.mdl-indicator{
+	max-width: 250px;
+	margin-top: 0px;	
+	margin-bottom:10px;
+	margin-right: 5px;
+	margin-left: 5px;	
+	display: inline-block;
+	z-index: 1;	
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+    	-ms-transition: all .3s ease-in-out;	
+    	 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+	
+}
+
+.modal .mdl-card.mdl-indicator{
+	display: inline-block;
+	
+}
+
+.mdl-card.mdl-indicator.mdl-indicator__inactive{
+	transform: scale(0);
+}
+
+.mdl-card.mdl-indicator:hover{
+    -webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    		box-shadow: 0 2px 15px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+    	-ms-transition: all .3s ease-in-out;	
+    	 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+}
+
+.mdl-indicator .mdl-card__title {
+	min-height: 55px;
+	max-height: 165px;
+	padding-bottom: 0;
+    padding-top: 50px;
+	z-index: -1;
+	text-align: center;
+}
+
+.mdl-indicator .mdl-card__supporting-text {
+	text-align: center;
+	min-height: 110px;
+	padding-top: 0;
+	z-index: 0
+}
+
+.mdl-indicator .mdl-card__supporting-text h2 {
+	color: #757575 !important;
+	font-size: 18px;
+	font-weight: 500 !important;
+	margin: 0;
+	margin-bottom: 5px;
+	line-height: 1
+}
+
+.mdl-indicator .mdl-card__supporting-text h4 {
+	color:  #757575;
+	font-size: 14px;
+	font-weight: lighter;
+	margin: 0;
+	line-height: 1.5;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+    height: initial;
+	min-height: 84px;
+}
+
+.mdl-indicator .mdl-card__actions{
+	padding-bottom: 10px;
+}
+
+.mdl-indicator .mdl-card__actions.text-center{
+	text-align: center;
+}
+
+.mdl-indicator .mdl-card__menu ul li {
+	font-size: 14px;
+	color: #757575;
+}
+
+.mdl-indicator .mdl-card__menu ul li i {
+	position: relative;
+	top: 6px;
+	font-size: 24px;
+	color: #757575;
+	margin-right: 5px
+}
+
+.mdl-indicator .mdl-list-numbers {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.mdl-indicator .mdl-list-numbers li {
+	display: inline;
+	margin: 0 2.5px;
+	color: #9E9E9E	
+}
+
+.mdl-indicator .mdl-list-numbers li i {
+	position: relative;
+	top: 0.5px;
+	font-size: 14px;
+	color: #9E9E9E
+}
+
+.mdl-indicator g.highcharts-axis{
+	display: none !important
+}
+
+.mdl-indicator .highcharts-container path{
+	stroke-width: 6px
+}
+
+.mdl-indicator path[fill="transparent"]{
+	fill: transparent !important	
+}
+
+.mdl-indicator path[fill="#E2574C"]{
+	fill: #FF3D00	
+}
+
+.mdl-indicator path[fill="#F4DC51"]{
+	fill: #FFCA28
+}
+
+.mdl-indicator path[fill="#43AC6D"]{
+	fill: #4CB5AB
+}
+
+.mdl-bar_state {
+    position: absolute;
+    border-radius: 100%;
+    top: 16px;
+    left: 16px;
+    height: 16px;
+    width: 16px;
+}
+
+.mdl-bar_state.mdl-state__red{
+	background-color: #FF3D00;
+}
+
+.mdl-bar_state.mdl-state__yellow{
+	background-color: #FFCA28;
+}
+
+.mdl-bar_state.mdl-state__cyan{
+	background-color: #4CB5AB;
+}
+
+.mdl-graphic {
+	width: 100%;
+	max-height: 155px
+}
+
+.breadcrumb{
+	text-align: left;
+	margin-bottom: 15px;
+	margin-left: 5px;
+    margin-right: 5px;
+}
+
+.mdl-filter__color{
+	width: 100%;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 15px
+}
+
+.mdl-filter__options, 
+.mdl-filter__options:HOVER,
+.mdl-filter__options:FOCUS,
+.mdl-filter__options:ACTIVE {
+	display: inline;
+	margin-right: 5px;
+	font-size:12px;
+	cursor: pointer;
+	color: #757575
+}
+
+.mdl-filter__options:AFTER{	
+    padding: 1.5px 8.5px;	
+	border-radius: 50%;
+	content: " "
+}
+
+.mdl-filter__options:NTH-CHILD(1):AFTER{	
+	background-color: rgb(225, 160, 50);	
+}
+
+.mdl-filter__options:NTH-CHILD(2):AFTER{	
+	background-color: #4CB5AB;	
+}
+
+.mdl-filter__options:NTH-CHILD(3):AFTER{	
+	background-color: #FFEB3B;	
+}
+
+.mdl-filter__options:NTH-CHILD(4):AFTER{	
+	background-color: #F44336;	
+}
+
+.mdl-filter__options:NTH-CHILD(5):AFTER{	
+	background-color: transparent;
+    padding: 2px;
+    font-family: 'Material Icons';
+    content: "\e900";
+    color: #757575;
+    line-height: 19px;
+    font-size: 19px;
+    position: relative;
+    top: 3px;
+}
+
+.mdl-filter__options.mdl-filter__none{
+	cursor: default;
+	color: rgba(117, 117, 117, 0.25)
+}
+
+.mdl-filter__options.mdl-filter__none:AFTER{
+	background-color: rgba(117, 117, 117, 0.25)	
+}
+
+/* --------------------------
+ *       INSCRITOS 
+ * --------------------------
+ */
+.inscrito-title {
+	margin: 0;
+	margin-bottom: 5px;
+	text-overflow: ellipsis;
+	overflow: hidden; 
+	white-space: nowrap;
+	padding: 0;
+	text-align: left;
+	font-weight: 600;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+    	-ms-transition: all .3s ease-in-out;	
+    	 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+}
+
+.inscrito-value,
+.inscrito-item{
+	margin: 0;
+	padding: 0;	
+	margin-bottom: 2.5px;	
+}
+
+.inscrito-item{
+	padding-right: 2.5px;	
+	text-align: left;
+	font-weight: lighter;
+	color: #9E9E9E
+}
+
+.inscrito-value{
+	text-overflow: ellipsis;
+	overflow: hidden; 
+	white-space: nowrap;
+	text-align: right;
+	font-weight: 600;
+}
+
+.mdl-card.mdl-inscritos{
+    max-width: 250px;
+	margin-top: 0px;	
+	margin-bottom: 10px;
+	margin-right: 5px;
+	margin-left: 5px;	
+	display: inline-block;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+    	-ms-transition: all .3s ease-in-out;
+    	 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+}
+
+.mdl-inscritos .mdl-card__title{
+	background-color: #2196F3;
+	color: #FFF;
+}
+
+.mdl-inscritos .mdl-card__menu{
+	width: 70px
+}
+
+.mdl-inscritos.mdl-invitados .mdl-card__title,
+.mdl-inscritos.mdl-invitados .mdl-card__supporting-text .tab-content,
+.mdl-inscritos.mdl-invitados .mdl-card__supporting-text .mdl-tabs__tab-bar,
+.mdl-inscritos.mdl-invitados .mdl-card__actions .mdl-button.mdl-button--raised{
+	background: #9E9E9E
+}
+
+.mdl-inscritos.mdl-invitados .mdl-card__actions .mdl-button{
+	color: #9E9E9E;
+}
+
+.mdl-inscritos.mdl-invitados .mdl-card__supporting-text .mdl-tabs__tab{
+	color: #bdbdbd
+}
+
+.mdl-inscritos .mdl-card__title .nav-pills>li{
+	margin: 0;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.mdl-inscritos .mdl-card__title .nav-pills>li:HOVER,
+.mdl-inscritos .mdl-card__title .nav-pills>li:HOVER>a,
+.mdl-inscritos .mdl-card__title .nav-pills>li:HOVER>a img{
+	cursor: pointer;
+}
+
+.mdl-inscritos .mdl-card__title .nav-pills>li>a{
+	padding: 0;
+	height: 35px;
+	width: 35px;
+	margin: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.mdl-inscritos .mdl-card__title .nav-pills>li>a img{
+	border-radius: 100%;
+	height: 35px;
+	width: 35px;	
+	margin: 0;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.mdl-inscritos .mdl-card__title .nav-pills>li.active>a img{
+	opacity: 1;
+	cursor: pointer;
+}
+
+.mdl-inscritos .mdl-card__menu i{
+	color: #FFF
+}
+
+.mdl-inscritos .mdl-card__supporting-text{
+	padding: 0;
+	padding-bottom: 10px;
+}
+
+.mdl-inscritos .mdl-card__supporting-text .mdl-tabs__tab{
+	color: #81D4FA
+}
+
+.mdl-inscritos .mdl-card__supporting-text .mdl-tabs__tab-bar{
+	height: auto;
+	background-color: #2196F3;	
+}
+
+.mdl-inscritos .mdl-card__supporting-text .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active{
+	color: #FFF;
+}
+
+.mdl-inscritos .mdl-card__supporting-text .mdl-tabs.is-upgraded .mdl-tabs__tab i{
+    position: relative;
+    margin-left: 5px;
+    top: 2px;
+    font-size: 15px;
+    color: #81D4FA;	
+}
+
+.mdl-inscritos .mdl-card__supporting-text .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active i{
+	color: #FFF;
+}
+
+.mdl-inscritos .mdl-card__supporting-text .mdl-tabs__tab .mdl-tabs__ripple-container .mdl-ripple,
+.mdl-inscritos .mdl-card__supporting-text .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after{
+	background-color: #FFF
+}
+
+.mdl-inscritos .mdl-card__supporting-text .tab-content{
+	background-color: #2196F3
+}
+
+.mdl-inscritos .mdl-card__supporting-text .tab-content .inscrito-title,
+.mdl-inscritos .mdl-card__supporting-text .tab-content .inscrito-item,
+.mdl-inscritos .mdl-card__supporting-text .tab-content .inscrito-value{
+	color: #FFF;
+	font-weight: lighter;
+}
+
+.mdl-inscritos .mdl-card__supporting-text .tab-content,
+.mdl-inscritos .mdl-card__supporting-text .mdl-tabs__panel{
+	padding: 10px 16px 
+} 
+
+.mdl-inscritos .mdl-card__supporting-text .tab-content .row,
+.mdl-inscritos .mdl-card__supporting-text .mdl-tabs__panel .row{
+	margin: 0
+}
+
+.mdl-inscritos .mdl-card__actions button.mdl-button--raised,
+.mdl-inscritos .mdl-card__actions a.mdl-button--raised{
+	background-color: #2196F3;
+	color: #FFF
+}
+
+.mdl-inscritos .inscrito-title.lastname,
+.mdl-inscritos .inscrito-title.name {
+	display: none;
+}
+	
+.nav-pills__left,
+.nav-pills__right {
+	display: none;
+    z-index: -2;
+    position: absolute;
+    top: 54.5px;
+    padding: 0px 2.5px;
+	z-index: -2;
+    background-color: #2196F3;
+    -webkit-transition: background-color .325s ease;
+       -moz-transition: background-color .325s ease;
+    	-ms-transition: background-color .325s ease;
+    	 -o-transition: background-color .325s ease;
+			transition: background-color .325s ease;
+}
+
+.nav-pills__left i,
+.nav-pills__right i{
+	font-size: 18px;
+	color: #FFFFFF
+}
+
+.nav-pills__right {
+	right: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;	
+}
+
+.nav-pills__left {
+	left: 0;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;	
+}
+
+.disabled {
+	cursor: no-drop !important;
+    background-color: #BDBDBD !important;	
+}
+
+.disabled i {
+    color: #FFFFFF !important;
+}
+
+/* --------------------------
+ *       EVALUATOR 
+ * --------------------------
+ */
+.mdl-card.mdl-evaluator{
+    max-width: 500px;
+	margin-top: 0px;	
+	margin-bottom: 10px;
+	margin-right: 5px;
+	margin-left: 5px;	
+	display: inline-block;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+    	-ms-transition: all .3s ease-in-out;	
+    	 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+}
+
+.mdl-card.mdl-evaluator .mdl-card__menu{
+	width: 220px
+}
+
+.mdl-card.mdl-evaluator .mdl-card__title .mdl-card__title-text{
+	-webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+/* --------------------------
+ *       DASHBOARD
+ * --------------------------
+ */
+
+.mdl-card.mdl-dashboard {
+    max-width: 260px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+    display: inline-block;
+    z-index: 1;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+/* --------------------------
+ *       EVENT 
+ * --------------------------
+ */
+.mdl-event .mdl-card__supporting-text.table-responsive{
+	padding: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+	overflow-x: auto;
+	border: none
+}
+
+.mdl-event .mdl-card__menu .mdl-button[data-calendar-view],
+.mdl-event .mdl-card__menu .mdl-button[data-calendar-nav],
+.mdl-event .mdl-card__menu .mdl-button[data-button-type],
+.mdl-event .mdl-card__menu .mdl-menu__item[data-button-type]{
+	display: none;
+}
+
+.mdl-event .mdl-card__menu .mdl-button[data-button-type="calendar"],
+.mdl-event .mdl-card__menu .mdl-button[data-button-type="onclick"]{
+	display: inline-block;
+}
+
+.mdl-event .label-pending{
+	background-color: #757575
+}
+
+.mdl-event .label-canceled{
+	background-color: #F44336
+}
+
+.mdl-event .label-realized{
+	background-color: #2196F3
+}
+
+.mdl-event .label-pending-today{
+	background-color: #4CAF50
+}
+
+@media ( max-width: 768px ){	
+	.mdl-calendar .mdl-card__menu .mdl-button[data-calendar-view],
+	.mdl-calendar .mdl-card__menu .mdl-button[data-calendar-nav],
+	.mdl-calendar .mdl-card__menu .mdl-button[data-button-type]{
+		display: none;
+	}
+	
+	.mdl-calendar .mdl-card__menu .mdl-button[data-calendar-nav="prev"],	
+	.mdl-calendar .mdl-card__menu .mdl-button[data-calendar-nav="next"],	
+	.mdl-calendar .mdl-card__menu .mdl-button[data-button-type="menu"]{
+		display: inline-block;
+	}
+}
+
+
+/* TITLE CARDS */
+.mdl-card.mdl-teacher h2.mdl-card__title-text,
+.mdl-card.mdl-teacher h2.mdl-card__title-text,
+.mdl-card.mdl-teacher h2.mdl-card__title-text,
+.mdl-card.mdl-teacher h2.mdl-card__title-text {
+	color: #757575;
+	white-space: nowrap;
+	width: -webkit-calc(100% - 35px);
+	width: -moz-calc(100% - 35px);
+	width: -ms-calc(100% - 35px);
+	width: -o-calc(100% - 35px);
+	width: calc(100% - 35px);
+}
+
+/* SOMBRAS HOVRES ALL CARDS */
+.mdl-card.mdl-note:after,
+.mdl-card.mdl-tour:after,
+.mdl-card.mdl-parent:after,
+.mdl-card.mdl-teacher:after,
+.mdl-card.mdl-student:after,
+.mdl-student_assitence:after,
+.mdl-card.mdl-classroom:after,
+.mdl-card.mdl-inscritos:after,
+.mdl-card.mdl-collaborator:after,
+.mdl-card.mdl-evaluator::after {
+	z-index: -2;
+	content: "";
+	opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+ 	box-shadow: 0 2px 15px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    -webkit-transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.mdl-card.mdl-note:hover:after,
+.mdl-card.mdl-tour:hover:after,
+.mdl-card.mdl-parent:hover:after,
+.mdl-card.mdl-teacher:hover:after,
+.mdl-card.mdl-student:hover:after,
+.mdl-student_assitence:hover:after,
+.mdl-card.mdl-classroom:hover:after,
+.mdl-card.mdl-inscritos:hover:after,
+.mdl-card.mdl-collaborator:hover:after,
+.mdl-card.mdl-evaluator:hover:after{
+	opacity: 1;
+}
+
+/* MDL MENU FOR CARDS */
+.mdl-card.mdl-parent .mdl-menu__container,
+.mdl-card.mdl-teacher .mdl-menu__container,
+.mdl-card.mdl-student .mdl-menu__container,
+.mdl-card.mdl-classroom .mdl-menu__container,
+.mdl-card.mdl-collaborator .mdl-menu__container {
+	margin-right: inherit !important;
+}
+
+/* ITEM/ VALUE FOR CARDS */
+.parent-name,
+.parent-lastname,
+.student-name,
+.student-lastname,
+.teacher-name,
+.teacher-lastname,
+.classroom-name,
+.classroom-lastname,
+.collaborator-name,
+.collaborator-lastname {
+	text-align: center;	
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0;
+	padding: 0 !important;
+	line-height: 1.25;
+	cursor:default;
+	overflow: hidden;
+	white-space: nowrap;
+	width: -webkit-calc(100% - 0px);	
+	width: -moz-calc(100% - 0px);	
+	width: -ms-calc(100% - 0px);	
+	width: -o-calc(100% - 0px);	
+	width: calc(100% - 0px);	
+}
+
+/* no mover */
+.collaborator-value,
+.collaborator-rol{
+	padding: 0 !important;
+}
+
+.parent-name::AFTER,
+.parent-lastname::AFTER,
+.student-name::AFTER,
+.teacher-name::AFTER,
+.teacher-lastname::AFTER,
+.student-lastname::AFTER,
+.collaborator-name::AFTER,
+.collaborator-lastname::AFTER {
+	content: ' ';
+    width: 50px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 100;
+    text-align: right;
+    background-image: -webkit-gradient(linear,left top,right top,color-stop(0%,rgba(255,255,255,0)),color-stop(100%,rgba(255,255,255,1)));
+    background-image: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1));
+    background: linear-gradient(to right,rgba(255,255,255,0),#FFFFFF);
+}
+
+.classroom-name:NTH-CHILD(2) {
+	margin-top: 7.5px;	
+}
+
+.parent-head,
+.parent-item,
+.parent-value,
+.teacher-head,
+.teacher-item,
+.teacher-value,
+.student-head,
+.student-item,
+.student-value,
+.classroom-head,
+.classroom-item,
+.classroom-value,
+.collaborator-head,
+.collaborator-item,
+.collaborator-value {
+	height: 20px		
+}
+
+.student-head,
+.classroom-head,
+.parent-head,
+.teacher-head,
+.collaborator-head {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 0 !important;
+}
+
+.student-value.student-link,
+.classroom-value.classroom-link,
+.parent-value.parent-link,
+.teacher-value.student-link,
+.collaborator-value.collaborator-link {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.student-value,
+.classroom-value,
+.parent-value,
+.teacher-value,
+.collaborator-value {
+	font-weight: lighter;	
+}	
+
+.collaborator-head strong{
+	font-weight: lighter;	
+}
+
+.student-head,
+.student-item,
+.classroom-head,
+.classroom-item,
+.parent-head,
+.parent-item,
+.teacher-head,
+.teacher-item,
+.collaborator-head,
+.collaborator-item {
+	text-align: left;	
+}
+
+.student-item,
+.classroom-item,
+.parent-item,
+.teacher-item,
+.collaborator-item {
+	text-overflow: ellipsis;
+	overflow: hidden; 
+	white-space: nowrap;
+	font-weight: 100;	
+	color: #9E9E9E;
+	padding: 0 !important;
+}
+
+.student-value,
+.classroom-value,
+.parent-value,
+.teacher-value,
+.collaborator-value {
+	text-align: right;
+	padding-right: 0 !important;
+	text-overflow: ellipsis;
+	overflow: hidden; 
+	white-space: nowrap;	
+	font-weight: 500;		
+	color: #757575 !important;
+}
+
+.mdl-card.mdl-indicator,
+.mdl-card.mdl-parent,
+.mdl-card.mdl-student,
+.mdl-card.mdl-teacher,	
+.mdl-card.mdl-classroom,
+.mdl-card.mdl-collaborator,
+.mdl-card.mdl-inscritos{
+	user-select: text;
+}
+
+.mdl-collaborator .mdl-card__supporting-text .nav>li>a {
+	padding: 0;
+}
+
+.mdl-collaborator .nav-pills__left,.mdl-collaborator .nav-pills__right{
+	background-color: #009688;
+	top: 62px;
+}
+
+/* RESPONSIVE ALL CARDS */
+@media ( max-width : 768px ){
+	.mdl-card.mdl-indicator,
+	.mdl-card.mdl-parent,
+	.mdl-card.mdl-student,
+	.mdl-card.mdl-teacher,	
+	.mdl-card.mdl-classroom,
+	.mdl-card.mdl-collaborator,
+	.mdl-card.mdl-inscritos{
+		max-width: 140px;
+	}
+	
+	.mdl-card.mdl-collaborator .mdl-card__supporting-text .highcharts-container{
+		display: none;
+	}
+	
+	.mdl-card.mdl-collaborator .mdl-card__title.p-t-0{
+		padding: 10px 16px !important;
+	}
+	
+	.mdl-card.mdl-collaborator .mdl-card__supporting-text ul li label{
+	    line-height: 1.2;
+    	padding-top: 5px;
+	}
+	
+	.mdl-card.mdl-collaborator .mdl-card__supporting-text ul li label.name-multi{
+		display: block !important;
+	}
+	
+	.mdl-card.mdl-indicator .mdl-card__title{
+		max-height: 140px;
+	}
+	
+	.mdl-indicator .mdl-card__supporting-text h2{
+		font-size: 16px;
+		height: 30px;
+		margin-top:-15px;
+	}
+	
+	.inscrito-title::AFTER{
+		content: ' ';
+	    width: 50px;
+	    height: 100%;
+	    right: 0;
+	    top: 0;
+	    position: absolute;
+	    z-index: 100;
+	    text-align: right;
+	    background-image: -webkit-gradient(linear,left top,right top,color-stop(0%,rgba(255,255,255,0)),color-stop(100%,rgba(255,255,255,1)));
+	    background-image: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1));
+	    background: linear-gradient(to right,rgba(255,255,255,0),#FFFFFF);
+	}
+		
+	.mdl-inscritos .inscrito-title{
+		text-overflow: initial;
+	}
+	
+	.mdl-inscritos .inscrito-title{
+		display: none;
+		text-align: center;
+	}
+	
+	.mdl-inscritos .inscrito-title.lastname,
+	.mdl-inscritos .inscrito-title.name {
+		display: block;
+	}
+	
+	.mdl-collaborator .mdl-card__supporting-text .nav-pills>li,
+	.mdl-inscritos .mdl-card__title .nav-pills>li,
+	.mdl-inscritos .mdl-card__title .nav-pills>li a{
+		width: 100%;
+		height: 75px;
+		margin: auto;
+		display: none;
+	}
+	
+	.mdl-collaborator .mdl-card__supporting-text .nav-pills>li.active a,
+	.mdl-collaborator .mdl-card__supporting-text .nav-pills>li.active,
+	.mdl-inscritos .mdl-card__title .nav-pills>li.active,
+	.mdl-inscritos .mdl-card__title .nav-pills>li.active a{
+		width: 100%;
+		height: 70px;
+		margin: auto;
+		display: block;
+	}
+	
+	.mdl-inscritos .mdl-card__title {
+		padding-top: 30px;
+	}
+	
+	.mdl-inscritos .mdl-card__title,
+	.mdl-inscritos .mdl-card__supporting-text .tab-content,	
+	.mdl-inscritos.mdl-invitados .mdl-card__title,
+	.mdl-inscritos.mdl-invitados .mdl-card__supporting-text .tab-content	{
+		background-color: #FFFFFF;
+	}
+	
+	.mdl-invitados .nav-pills__left,
+	.mdl-invitados .nav-pills__right {
+	    background-color: #9E9E9E;
+	}
+
+	.mdl-invitados .nav-pills__left i,
+	.mdl-invitados .nav-pills__right i{
+		color: #FFFFFF;
+	}
+	
+	.mdl-inscritos .mdl-card__supporting-text .tab-content {
+		padding: 0 16px;		
+	}
+	
+	.mdl-inscritos .mdl-card__title .nav.nav-pills{
+		margin: auto;
+	}
+	
+	.mdl-collaborator .mdl-card__supporting-text .nav-pills img,
+	.mdl-inscritos .mdl-card__title .nav-pills>li>a img{
+		width: 70px;
+		height: 70px;
+	}
+	
+	.mdl-inscritos .mdl-card__supporting-text .tab-content .inscrito-value,
+	.mdl-inscritos .mdl-card__supporting-text .tab-content .inscrito-item,
+	.mdl-inscritos .mdl-card__supporting-text .mdl-tabs{
+		display:none;
+	}
+	
+	.mdl-inscritos .mdl-card__supporting-text .tab-content .inscrito-value{
+		display: block;
+		position:absolute;
+		top: 5px;
+		right: 5px;
+	}
+	
+	.mdl-inscritos .mdl-card__supporting-text .tab-content .col-xs-5.inscrito-value .mdl-button i{
+		color: #757575 !important;
+		font-size:16px !important;
+	}
+	
+	.mdl-inscritos .mdl-card__supporting-text .tab-content .inscrito-title{
+		color: #757575;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+	
+	.nav-pills__left,
+	.nav-pills__right {
+		display: block;
+		z-index: 2;
+	}
+	
+	.mdl-card.mdl-indicator .mdl-card__title,
+	.mdl-card.mdl-student .mdl-card__title,
+	.mdl-card.mdl-teacher .mdl-card__title,
+	.mdl-card.mdl-classroom .mdl-card__title,	
+	.mdl-card.mdl-collaborator .mdl-card__title,
+	.mdl-card.mdl-parent .mdl-card__title {
+		padding-top: 16px
+	}
+	
+	.mdl-card.mdl-indicator .mdl-card__title img,
+	.mdl-card.mdl-parent .mdl-card__title img,
+	.mdl-card.mdl-student .mdl-card__title img,
+	.mdl-card.mdl-teacher .mdl-card__title img,	
+	.mdl-card.mdl-collaborator .mdl-card__title img {
+		width: 80px;
+		height: 80px;
+	}
+	
+	.mdl-card.mdl-indicator .mdl-card__title .mdl-graphic .icon-cup{
+		width: 80px !important;
+	    margin-top: 30px !important;
+	    height: 80px !important;
+	}
+	
+	.mdl-card.mdl-indicator .mdl-card__supporting-text{
+		min-height: 0;
+		padding: 0;
+	}
+	
+	.mdl-card.mdl-indicator .mdl-card__supporting-text h4,
+	.mdl-card.mdl-indicator .mdl-card__supporting-text [class^="col-"],
+	.mdl-card.mdl-parent .mdl-card__supporting-text [class^="col-"],	
+	.mdl-card.mdl-student .mdl-card__supporting-text [class^="col-"],	
+	.mdl-card.mdl-teacher .mdl-card__supporting-text [class^="col-"],
+	.mdl-card.mdl-classroom .mdl-card__supporting-text [class^="col-"],
+	.mdl-card.mdl-collaborator .mdl-card__supporting-text [class^="col-"] {
+		display: none
+	}
+	
+	.mdl-card.mdl-parent .mdl-card__supporting-text .parent-name,
+	.mdl-card.mdl-parent .mdl-card__supporting-text .parent-lastname,	
+	.mdl-card.mdl-student .mdl-card__supporting-text .student-name,
+	.mdl-card.mdl-student .mdl-card__supporting-text .student-lastname,
+	.mdl-card.mdl-teacher .mdl-card__supporting-text .teacher-name,
+	.mdl-card.mdl-teacher .mdl-card__supporting-text .teacher-lastname,	
+	.mdl-card.mdl-collaborator .mdl-card__supporting-text .collaborator-name,
+	.mdl-card.mdl-collaborator .mdl-card__supporting-text .collaborator-lastname {
+		display: block;
+		font-size: 14px;
+	}
+	
+	.mdl-card.mdl-classroom .mdl-card__supporting-text [class^="col-"]:NTH-CHILD(3),
+	.mdl-card.mdl-classroom .mdl-card__supporting-text [class^="col-"]:NTH-CHILD(5) {
+		display: block;
+		width: 100%;
+		text-align: left;
+		padding: 0;
+		font-size: 14px
+	}
+	
+	.mdl-card.mdl-indicator .mdl-card__actions .mdl-list-numbers{
+		display: none;
+	}
+	
+	.mdl-card.mdl-indicator .mdl-card__actions .mdl-button,
+	.mdl-card.mdl-parent .mdl-card__actions .mdl-button,
+	.mdl-card.mdl-student .mdl-card__actions .mdl-button,
+	.mdl-card.mdl-teacher .mdl-card__actions .mdl-button,	
+	.mdl-card.mdl-classroom .mdl-card__actions .mdl-button,	
+	.mdl-card.mdl-collaborator .mdl-card__actions .mdl-button,
+	.mdl-card.mdl-inscritos .mdl-card__actions .mdl-button {
+		font-size: 12px;
+		width: 100%;
+		margin: 0 !important;
+		padding: 0 !important;
+		height: 28px;
+		line-height: 28px;
+		display: none;		
+	}
+	
+	.mdl-card.mdl-indicator .mdl-card__actions .mdl-button.mdl-button--raised,
+	.mdl-card.mdl-parent .mdl-card__actions .mdl-button.mdl-button--raised,	
+	.mdl-card.mdl-student .mdl-card__actions .mdl-button.mdl-button--raised,
+	.mdl-card.mdl-teacher .mdl-card__actions .mdl-button.mdl-button--raised,
+	.mdl-card.mdl-classroom .mdl-card__actions .mdl-button.mdl-button--raised,	
+	.mdl-card.mdl-collaborator .mdl-card__actions .mdl-button.mdl-button--raised,
+	.mdl-card.mdl-inscritos .mdl-card__actions .mdl-button.mdl-button--raised {
+		display: block;
+	}	
+	
+	.mdl-card.mdl-student .mdl-card__title .state{
+		top: 60px;
+		right: -webkit-calc(50% - 50px);		
+		right: -moz-calc(50% - 50px);		
+		right: -ms-calc(50% - 50px);
+		right: -o-calc(50% - 50px);				
+		right: calc(50% - 50px);
+		width: 35px;
+		height: 35px;
+		font-size: 12px;
+		line-height: 2.5;
+	}
+	
+	.mdl-card.mdl-indicator.mdl-card__menu .mdl-button--icon,	
+	.mdl-card.mdl-parent .mdl-card__menu .mdl-button--icon,	
+	.mdl-card.mdl-student .mdl-card__menu .mdl-button--icon,	
+	.mdl-card.mdl-teacher .mdl-card__menu .mdl-button--icon,
+	.mdl-card.mdl-classroom .mdl-card__menu .mdl-button--icon,	
+	.mdl-card.mdl-collaborator .mdl-card__menu .mdl-button--icon,
+	.mdl-card.mdl-inscritos .mdl-card__menu .mdl-button--icon {
+		height: 24px;
+		min-width: 24px;
+		width: 24px;
+		line-height: 1;
+	}
+
+	.mdl-card.mdl-indicator .mdl-card__menu .mdl-button--icon i,
+	.mdl-card.mdl-parent .mdl-card__menu .mdl-button--icon i,	
+	.mdl-card.mdl-student .mdl-card__menu .mdl-button--icon i,
+	.mdl-card.mdl-teacher .mdl-card__menu .mdl-button--icon i,	
+	.mdl-card.mdl-classroom .mdl-card__menu .mdl-button--icon i,
+	.mdl-card.mdl-collaborator .mdl-card__menu .mdl-button--icon i,
+	.mdl-card.mdl-inscritos .mdl-card__menu .mdl-button--icon i {
+		font-size: 18px;
+		color: #757575
+	}
+	
+	.mdl-card.mdl-indicator .mdl-menu__container ul li,
+	.mdl-card.mdl-parent .mdl-menu__container ul li,	
+	.mdl-card.mdl-teacher .mdl-menu__container ul li,
+	.mdl-card.mdl-student .mdl-menu__container ul li,	
+	.mdl-card.mdl-classroom .mdl-menu__container ul li,	
+	.mdl-card.mdl-collaborator .mdl-menu__container ul li,	
+	.mdl-card.mdl-inscritos .mdl-menu__container ul li {
+		height: 36px;
+		line-height: 36px;
+		font-size: 12px;
+	}
+	
+	.mdl-card.mdl-indicator .mdl-menu__container ul li i,
+	.mdl-card.mdl-parent .mdl-menu__container ul li i,	
+	.mdl-card.mdl-teacher .mdl-menu__container ul li i,	
+	.mdl-card.mdl-student .mdl-menu__container ul li i,
+	.mdl-card.mdl-classroom .mdl-menu__container ul li i,	
+	.mdl-card.mdl-collaborator .mdl-menu__container ul li i,	
+	.mdl-card.mdl-inscritos .mdl-menu__container ul li i {
+		font-size: 14px;
+		top: 2px;
+		
+	}
+	
+	/* PHOTO */
+	.mdl-photo .fade-caption i{
+		font-size: 28px;
+		top: 40px;
+		right: -webkit-calc(50% - 15px);		
+		right: -moz-calc(50% - 15px);		
+		right: -ms-calc(50% - 15px);
+		right: -o-calc(50% - 15px);				
+		right: calc(50% - 15px);		
+	}
+}
+
+@media ( min-width : 334px ) and ( max-width : 640px ) {		
+	.mdl-card.mdl-teacher h2.mdl-card__title-text {
+		visibility:initial;
+	}
+}
+
+@media ( min-width : 641px ) and ( max-width : 768px ) {	
+	.mdl-card.mdl-teacher h2.mdl-card__title-text {
+		visibility:initial;
+	}
+
+}
+
+@media ( min-width : 1078px ) and ( max-width : 1401px ) {
+	.is-open__visibility .mdl-content-cards {
+		max-width: 782px;
+	}
+	
+	.is-open__visibility .mdl-card.mdl-parent,	
+	.is-open__visibility .mdl-card.mdl-classroom,
+	.is-open__visibility .mdl-card.mdl-indicator,
+	.is-open__visibility .mdl-card.mdl-inscritos,
+	.is-open__visibility .mdl-card.mdl-collaborator,
+	.is-open__visibility .is-closed .mdl-card.mdl-parent,	
+	.is-open__visibility .is-closed .mdl-card.mdl-student,
+	.is-open__visibility .is-closed .mdl-card.mdl-classroom,
+	.is-open__visibility .is-closed .mdl-card.mdl-indicator,
+	.is-open__visibility .is-closed .mdl-card.mdl-inscritos,
+	.is-open__visibility .is-closed .mdl-card.mdl-collaborator {
+		margin-left: 5px !important;
+		margin-right: 5px !important;
+	}
+	
+	
+	.is-open__visibility .mdl-card.mdl-student{
+		margin-left: 3px !important;
+		margin-right: 3px !important;
+	}
+	
+	.is-open__visibility .is-closed .mdl-content-cards {
+		max-width: 1042px;
+	}
+}
+
+@media ( min-width : 1402px ) and ( max-width : 1652px ) {	
+	.is-open__visibility .mdl-content-cards {
+		max-width: 1042px;
+	}
+		
+	.is-open__visibility .mdl-card.mdl-parent,	
+	.is-open__visibility .mdl-card.mdl-classroom,
+	.is-open__visibility .mdl-card.mdl-indicator,
+	.is-open__visibility .mdl-card.mdl-inscritos,
+	.is-open__visibility .mdl-card.mdl-collaborator {
+		margin-left: 5px !important;
+		margin-right: 5px !important;
+	}
+	
+	
+	.is-open__visibility .mdl-card.mdl-student{
+		margin-left: 3px !important;
+		margin-right: 3px !important;
+	}
+}
+
+@media ( min-width : 1653px ) {
+	.is-open__visibility .mdl-content-cards {
+		max-width: 1300px;
+	}
+	
+	.is-open__visibility .mdl-card.mdl-parent,
+	.is-open__visibility .mdl-card.mdl-classroom,
+	.is-open__visibility .mdl-card.mdl-indicator,
+	.is-open__visibility .mdl-card.mdl-inscritos,
+	.is-open__visibility .mdl-card.mdl-collaborator {
+		margin-left: 5px !important;
+		margin-right: 5px !important;
+	}
+	
+	.is-open__visibility .mdl-card.mdl-student{
+		margin-left: 3px !important;
+		margin-right: 3px !important;
+	}
+}
+
+@media ( min-width : 1371px ) {
+	.is-open__visibility .is-closed .mdl-content-cards {
+		max-width: 1306px;
+	}
+	
+	.is-open__visibility .is-closed .mdl-card.mdl-parent,
+	.is-open__visibility .is-closed .mdl-card.mdl-student,
+	.is-open__visibility .is-closed .mdl-card.mdl-classroom,
+	.is-open__visibility .is-closed .mdl-card.mdl-indicator,
+	.is-open__visibility .is-closed .mdl-card.mdl-inscritos,
+	.is-open__visibility .is-closed .mdl-card.mdl-collaborator {
+		margin-left: 5px !important;
+		margin-right: 5px !important;
+	}
+}

@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Saenz");
+
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+
+.modal-galeria {
+    position: relative;
+    top: 20px;
+    margin:auto;    
+}
+
+.modal-galeria .container .list-image {
+    display: flex;
+    flex-wrap: wrap;
+     
+}
+
+.modal-galeria .container .list-image li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    list-style:none;
+}
+.modal-galeria .container .list-image li .container__image {
+    position:relative;
+    background: #3c4ef1;
+}
+
+.modal-galeria .container .list-image li .container__image img {
+    position:relative;
+    width:200px;
+    height: 150px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+
+}
+
+.modal-galeria .container .list-image li .container__image .information__image {
+    position:absolute;
+    bottom: 0;
+    width:250px;
+    height: 60px;
+    background: none;
+}
+
+.modal-galeria .container .list-image li .container__image .information__image {
+    font-family: "Open Sans";
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.modal-galeria .container .list-image li .container__image .information__image .view__moreinfo {
+    position: relative;
+    top:30px;
+    display: block;
+    padding:6px 12px;
+    height: 35px;
+    line-height: 12px;
+    width: 170px;
+    text-decoration: none;
+    color:#888;
+    font-family: "Open Sans";
+    font-size: 10px;
+    border-radius: 90px;
+    background: #fff;
+    border: 2px solid #888;
+}
